@@ -1,6 +1,5 @@
-function nome() {
-  const marcos = '';
-  return marcos;
+export default class Pessoa {
+  constructor(nome) {
+    this.nome = nome;
+  }
 }
-
-nome();
