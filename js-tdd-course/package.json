@@ -1,0 +1,15 @@
+{
+  "name": "js-tdd-course",
+  "version": "1.0.0",
+  "description": "My library of course JS with TDD in practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js",
+    "tdd"
+  ],
+  "author": "Marcos Vinicius de Oliveira <contato@vmarcosp.com.br> (http://www.vmarcosp.com.br/)",
+  "license": "MIT"
+}
