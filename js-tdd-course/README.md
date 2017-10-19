@@ -1,4 +1,4 @@
-# Project Title
+# Course **JS with TDD**
 
 One Paragraph of project description goes here
 
