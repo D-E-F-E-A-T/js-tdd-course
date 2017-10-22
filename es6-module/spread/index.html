@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Spread</title>
+</head>
+
+<body>
+
+	<!-- Intro -->
+	<script src="">
+		let front = ['react', 'vue', 'angular'];
+		console.log(...front);
+		console.log({ ...front
+		});
+	</script>
+
+	<!-- Spread in functions -->
+	<script src="">
+		const makeSandwich = (bread, cheese, sauce) => console.log(
+			`Ur sandwich with ${bread} bread, ${cheese} cheese and ${sauce},is done!`);
+
+		const ingredients = ['white', 'cheddar', 'barbecue'];
+		makeSandwich(...ingredients);
+	</script>
+
+	<!-- Rest params -->
+	<script>
+		const multiply = (mult, ...args) => {
+			return args.map(a => mult * a);
+		};
+
+		console.log(multiply(2, 1, 2, 3));
+	</script>
+
+</body>
+
+</html>
