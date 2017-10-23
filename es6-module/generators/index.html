@@ -23,7 +23,7 @@
 		function ajax(url) {
 			fetch(url)
 				.then(data => data.json())
-				.then(response => data.next(response));
+				.then(response => data.next('response'));
 		}
 
 		function* fetcher() {
