@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Prototype</title>
+</head>
+
+<body>
+	<!-- Prototype -->
+	<script src="">
+		function Animal(kind, sound) {
+			this.kind = kind;
+			this.sound = sound;
+		}
+
+		Animal.prototype.sayHello = function () {
+			console.log(`${this.sound}!!	I'm a ${this.kind}`);
+		}
+
+		const dog = new Animal('dog', 'auau');
+		dog.sayHello();
+	</script>
+
+	<!-- Class -->
+	<script>
+		class Animal {
+			constructor(kind, sound) {
+				this.kind = kind;
+				this.sound = sound;
+			}
+
+			sayHello() {
+				console.log(`${this.sound}!!	I'm a ${this.kind}`);
+			}
+		}
+		
+		const dog = new Animal('dog', 'auau');
+		dog.sayHello();
+	</script>
+
+
+</body>
+
+</html>

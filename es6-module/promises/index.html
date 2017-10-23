@@ -19,8 +19,28 @@
 		defer.then(console.log).catch(console.log)
 	</script>
 
+	<!-- Multiple  -->
 	<script>
-	
+		const countries = new Promise((resolve, reject) => {
+			setTimeout(() => resolve(['England', 'Ireland', 'Scotland']), 2000);
+		});
+
+		const currency = new Promise((resolve, reject) => {
+			setTimeout(() => resolve({
+				currency: 'euro',
+				value: 500.50
+			}));
+		});
+
+		// Resolving all
+		Promise
+			.all([countries, currency])
+			.then(console.log);
+
+		// Resolving only the first resolved promise
+		Promise
+			.race([countries, currency])
+			.then(console.log);
 	</script>
 
 
