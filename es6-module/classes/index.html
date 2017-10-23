@@ -22,7 +22,7 @@
 	</script>
 
 	<!-- Class -->
-	<script>
+	<script src="">
 		class Animal {
 			constructor(kind, sound) {
 				this.kind = kind;
@@ -33,11 +33,30 @@
 				console.log(`${this.sound}!!	I'm a ${this.kind}`);
 			}
 		}
-		
+
 		const dog = new Animal('dog', 'auau');
 		dog.sayHello();
 	</script>
 
+	<!-- Inheritance -->
+	<script>
+
+		class Animal {
+			constructor(name) {
+				this.name = name;
+			}
+		}
+
+		class Dog extends Animal {
+			constructor(name, sound) {
+				super(name);
+				this.sound = sound;
+			}
+		}
+
+		const dog = new Dog('spike', 'au au');
+		console.log(dog);
+	</script>
 
 </body>
 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Generators</title>
+</head>
+
+<body>
+	<!-- Intro -->
+	<script src>
+		function* generateNames() {
+			yield 'Sasuke';
+			yield 'Naruto';
+			yield 'Rock Lee';
+		}
+
+		const names = generateNames();
+		console.log(names.next());
+	</script>
+
+	<!-- Usin with ajax -->
+	<script>
+		function ajax(url) {
+			fetch(url)
+				.then(data => data.json())
+				.then(response => data.next(response));
+		}
+
+		function* fetcher() {
+			console.log('Find posts');
+			const posts = yield ajax('https://willianjusten.com.br/search.json');
+			console.log(posts);
+
+			console.log('Find users');
+			const user = yield ajax('https://api.github.com/users/vmarcosp');
+			console.log(user);
+		}
+
+		const data = fetcher();
+
+		data.next();
+
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Symbols</title>
+</head>
+
+<body>
+	<!-- Intro -->
+	<script src>
+
+		const person = {
+			[Symbol('name')]: 'John',
+			[Symbol('age')]: 20,
+			city: 'London'
+		};
+
+		//Get keys
+
+		// Returns only = ['city']
+		console.log(Object.keys(person));
+
+		//Return all symbols
+		const personSymbols = Object.getOwnPropertySymbols(person);
+		const values = personSymbols.map(s => person[s]);
+
+		console.log(values);
+	</script>
+
+	<!-- Iterators and Iterables -->
+	<script>
+		[1, 2, 3, 4, 5] // Iterables
+
+		const txt = 'London';
+		const txtIterator = txt[Symbol.iterator]();//iterator
+
+		for(letter of txt){
+			console.log(letter);
+		}
+
+	</script>
+
+</body>
+
+</html>
