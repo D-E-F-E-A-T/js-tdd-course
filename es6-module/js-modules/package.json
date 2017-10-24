@@ -1,0 +1,26 @@
+{
+  "name": "es6-module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "01-var.js",
+  "scripts": {
+    "build": "webpack --colors --progress",
+    "watch": "npm run build -- --watch",
+    "server":"./node_modules/.bin/webpack-dev-server --inline"
+  },
+  "keywords": [],
+  "author": "Marcos Vinicius <marcosvcontato.mv@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.3"
+  },
+  "dependencies": {
+    "ramda": "^0.25.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  }
+}
