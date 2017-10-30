@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "./node_modules/.bin/eslint src/**/*.js",
     "prepush": "npm run lint",
-    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --watch",
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch ",
     "test-bail": "npm test -- --bail"
   },
   "keywords": [
@@ -16,6 +16,8 @@
   "author": "Marcos Vinicius de Oliveira <contato@vmarcosp.com.br> (http://www.vmarcosp.com.br/)",
   "license": "MIT",
   "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
     "chai": "^4.1.2",
     "eslint": "^4.9.0",
     "eslint-config-airbnb-base": "^12.1.0",
