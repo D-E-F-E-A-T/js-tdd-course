@@ -1,6 +1,8 @@
-const sum = (a, b) => a + b
-const sub = (a, b) => a - b
-const mult = (a, b) => a * b
-const div = (a, b) => (b === 0) ? 'Division by 0 is invalid' : a / b
+const FizzBuzz = (number) => {
+  if (number % 5 === 0 && number % 3 === 0) return 'FizzBuzz';
+  if (number % 3 === 0) return 'Fizz';
+  if (number % 5 === 0) return 'Buzz';
+  return number;
+};
 
-export { sum, sub, mult, div }
+export default FizzBuzz;
