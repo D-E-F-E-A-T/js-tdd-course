@@ -6,6 +6,4 @@ const FizzBuzz = (number) => {
   return number;
 };
 
-export const randomFunc = () => 'Random value :)';
-
 export default FizzBuzz;
