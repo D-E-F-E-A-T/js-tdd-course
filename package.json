@@ -4,11 +4,24 @@
   "description": "My library of course JS with TDD in practice",
   "main": "index.js",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint src/**/*.js --fix",
-    "prepush": "npm run lint",
-    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch",
+    "lint": "./node_modules/.bin/eslint src/**/*.js",
+    "prepush": "npm run lint && npm run test:coverage",
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
+    "test:watch": "npm test -- --watch",
     "test-bail": "npm test -- --bail",
-    "test:coverage":"nyc npm run test"
+    "test:coverage": "node_modules/.bin/nyc npm test"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "functions": 80,
+    "lines": 80,
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "tests/**"
+    ]
   },
   "keywords": [
     "js",
